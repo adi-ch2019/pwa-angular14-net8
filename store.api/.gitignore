@@ -1,0 +1,8 @@
+bin/
+obj/
+*.csproj.user
+*.dll
+*.exe
+
+node_modules/
+dist/
