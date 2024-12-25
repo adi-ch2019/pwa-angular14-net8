@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 
 import { HttpClient } from '@angular/common/http';
 
@@ -10,11 +10,11 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GreetingComponent {
 
-  greetingMessage:string;
+  greetingMessage:string='';
   constructor(private http: HttpClient) { }
 
   ngOnInit():void{
-    this.http.get<string>('https://localhost:5001/api/greeting').subscribe({
+    this.http.get<string>('http://localhost:5185/api/Greetings').subscribe({
       next: (message)=> {
         this.greetingMessage=message;
       },
