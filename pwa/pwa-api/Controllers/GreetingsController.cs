@@ -9,7 +9,8 @@ namespace pwa_api.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("Welcome to PWA!");
+            //return Ok("Welcome to PWA!");
+            return Ok(new { message = "Welcome to PWA!" });
         }
     }
 }
