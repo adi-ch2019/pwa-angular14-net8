@@ -1,1 +1,11 @@
-<p>weather-forecast works!</p>
+<!-- weather-forecast.component.html -->>
+<div *ngIf="forecasts">
+    <h2>Weather Forecasts</h2>
+    <ul>
+        <li *ngFor="let forecast of forecasts">
+            Date: {{forecast.date }},
+            Temperature: {{forecast.temperatureC}} Degree Celsius,
+            Summary: {{forecast.summary}}
+        </li>
+    </ul>
+</div>    
