@@ -23,7 +23,8 @@ app.UseCors("AllowSpecificOrigin");
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI();    
+    app.UseDeveloperExceptionPage();
 }
 
 app.UseHttpsRedirection();
@@ -31,5 +32,8 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Endpoint configuration 
+app.UseRouting(); app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 
 app.Run();
