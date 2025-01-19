@@ -5,5 +5,6 @@ export const serverRoutes: ServerRoute[] = [
   { path: 'about', renderMode: RenderMode.Prerender }, // Prerender the about page
   { path: 'greeting', renderMode: RenderMode.Prerender }, // Prerender the greeting page
   { path: 'weather-forecast', renderMode: RenderMode.Prerender }, // Prerender the weather-forecast page
+  { path: 'values', renderMode: RenderMode.Prerender }, // Prerender the weather-forecast page
   { path: '**', renderMode: RenderMode.Prerender } // Wildcard route
 ];
